@@ -32,6 +32,9 @@ def vote_up(*args, **kwargs):
     name = target.get('name')
     display_name = target['profile']['display_name']
 
+    if display_name != "grehg":
+        return "only Gohd can judge me"
+
     if uid == user or user in banned:
         if uid in votes and uid != "u3942s8pn":
             votes[uid]["votes"] -= 1
